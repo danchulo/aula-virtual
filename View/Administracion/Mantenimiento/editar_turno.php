@@ -1,0 +1,40 @@
+<?php
+session_start();
+$lista=$_SESSION['listaSimple'];
+
+$cod=$lista['LISTA'][0]['CODIGO'];
+$nom=$lista['LISTA'][0]['NOMBRE'];
+?>
+
+
+				 <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                                <div class="muted pull-left">Editar Turno</div>
+                            </div>
+                            <div class="block-content collapse in">
+                                <div class="span12">
+			<form id="FormMante">
+                             <input name="id" type="hidden" value="<?php echo $cod?>"/>
+                                <input name="tipo" type="hidden" value="a"/>
+					<div class="control-group">
+                                          <div class="controls">
+                                              <input onkeypress="return validarLetra(event)" name="nom" class="input focused" id="focusedInput" value="<?php echo $nom?>" type="text" placeholder = "Nombre" required>
+                                          </div>
+                                        </div>
+					
+                                                                    
+					<div class="control-group">
+                                          <div class="controls">
+											
+                                             <input  type="button" onclick="grabar('../../Controlador','TurnoControlador.php','2','1')" class="btn btn-success" value="Guardar">
+
+                                          </div>
+                                        </div>
+                                </form>
+								</div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div> 
