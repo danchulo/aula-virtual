@@ -1,2 +1,2 @@
 # aula-virtual
-Realizado en PHP y MySQL con procedimientos almacenados, vistas y disparadores.
+Realizado en PHP, AJAX y MySQL con procedimientos almacenados, vistas y disparadores.
